@@ -13,7 +13,12 @@ char* argv [16];
     while ((ch=getchar()) != EOF) { 
       
     if (ch == ' ' || ch == '\n') {
-     if (in_word==1) { in_word=0; buffer[i][j]='\0'; argv[i]=&buffer[i]; ++i; j=0; }}
+     if (in_word==1) { 
+       in_word=0;
+       buffer[i][j]='\0'; 
+       argv[i]=&buffer[i]; 
+       ++i; 
+       j=0; }}
     else { buffer[i][j]=ch; ++j; in_word=1; };
       
     if (ch=='\n') {
